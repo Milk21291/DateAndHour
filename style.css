@@ -1,0 +1,17 @@
+body {
+    background-color: darkslategrey;
+}
+
+div {
+    background: white;
+    padding: 5%;
+    width: 50%;
+    height: 50%;
+    border-radius: 10px;
+    text-align: center;
+}
+
+section {
+    display: flex;
+    justify-content: center;   
+}
