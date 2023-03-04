@@ -1,4 +1,4 @@
-const resultado = document.getElementById('resultado');
+const result = document.getElementById('result');
 
 const date = new Date();
 const dayOfTheWeek = date.getDay();
@@ -69,5 +69,5 @@ const minuts = date.getMinutes();
 
         monthText = months(month);
     
-    resultado.innerHTML = `<h1> ${dayOfWeekText}, ${dayText} de ${monthText} de ${year} às ${hour}:${minuts} </h1>`;
+    result.innerHTML = `<h1> ${dayOfWeekText}, ${dayText} de ${monthText} de ${year} às ${hour}:${minuts} </h1>`;
     
