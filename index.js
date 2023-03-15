@@ -1,4 +1,4 @@
-const result = document.getElementById('result');
+const resultado = document.getElementById('resultado');
 
 const date = new Date();
 const dayOfTheWeek = date.getDay();
@@ -9,6 +9,7 @@ const month = date.getMonth();
 let monthText = month;
 const year = date.getFullYear();
 const hour = date.getHours();
+let hourText = hour
 const minuts = date.getMinutes();
 
 // Day of the week
@@ -42,7 +43,11 @@ const minuts = date.getMinutes();
         };
 
         function daysWithZero(withZero) {
-            return days[withZero]
+            if(days[withZero] < 10) {
+                return days[withZero]
+            } else {
+                return day
+            };
         };
 
         dayText = daysWithZero(day);
@@ -68,6 +73,29 @@ const minuts = date.getMinutes();
         };
 
         monthText = months(month);
+
+        // Hours
+        const hours = {
+            1: '01',
+            2: '02',
+            3: '03',
+            4: '04',
+            5: '05',
+            6: '06',
+            7: '07',
+            8: '08',
+            9: '09',
+        };
+
+        function timeFunction(hourWithZero) {
+            if(hours[hourWithZero] < 10) {
+                return hours[hourWithZero]
+            } else {
+                return hour
+            };
+        };
+
+        hourText = timeFunction(hour);
     
-    result.innerHTML = `<h1> ${dayOfWeekText}, ${dayText} de ${monthText} de ${year} às ${hour}:${minuts} </h1>`;
+    resultado.innerHTML = `<h1> ${dayOfWeekText}, ${dayText} de ${monthText} de ${year} às ${hourText}:${minuts} </h1>`;
     
