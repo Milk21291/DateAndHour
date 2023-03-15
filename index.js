@@ -4,12 +4,12 @@ const date = new Date();
 const dayOfTheWeek = date.getDay();
 let dayOfWeekText = dayOfTheWeek;
 const day = date.getDate();
-let dayText = day
+let dayText = day;
 const month = date.getMonth();
 let monthText = month;
 const year = date.getFullYear();
 const hour = date.getHours();
-let hourText = hour
+let hourText = hour;
 const minuts = date.getMinutes();
 
 // Day of the week
